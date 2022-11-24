@@ -312,33 +312,17 @@ img{
     position: relative;
     overflow: hidden;
 }
-.portfolio__img img{
-    border-radius: .5rem;
-}
-.portfolio__link{
-    position: absolute;
-    bottom: -100%;
+
+.portfolio__img audio{
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255,255,255,.3);
-    border-radius: .5rem;
-    cursor: pointer;
-    backdrop-filter: blur(2px);
-    transition: .3s;
+    border-radius: 0 0 .5rem .5rem;
+}
+.portfolio__img img{
+    border-radius: .5rem .5rem 0 0;
 }
 
-.portfolio__link a audio{
-    width: 100%;
-    margin-top: 50%;
-}
-.portfolio__img:hover .portfolio__link{
-    bottom: 0;
-}
-.portfolio__link-name{
-    color: var(--dark-color);
+.portfolio__img-comingsoon img{
+    border-radius: .5rem .5rem .5rem .5rem;
 }
 
 /* ===== CONTACT =====*/
