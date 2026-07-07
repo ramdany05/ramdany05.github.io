@@ -12,7 +12,7 @@ interface CertificationItemProps {
  * Individual certification card component
  */
 function CertificationItem({ certification }: CertificationItemProps) {
-  const { name, issuer, year } = certification;
+  const { name, issuer, year, url } = certification;
   const certId = `certification-${name.toLowerCase().replace(/\s+/g, "-")}`;
 
   return (
@@ -20,7 +20,19 @@ function CertificationItem({ certification }: CertificationItemProps) {
       <CardHeader>
         <div className="flex items-center justify-between gap-x-2 text-base">
           <h3 className="font-semibold leading-none" id={certId}>
-            {name}
+            {url ? (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+                aria-label={`${name} certificate`}
+              >
+                {name}
+              </a>
+            ) : (
+              name
+            )}
           </h3>
           <div
             className="text-sm tabular-nums text-gray-500"

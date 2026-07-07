@@ -46,6 +46,7 @@ export interface ResumeData {
     name: string;
     issuer: string;
     year: string;
+    url?: string;
   }>;
   projects: Array<{
     title: string;

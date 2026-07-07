@@ -143,21 +143,25 @@ export const RESUME_DATA: ResumeData = {
       name: "Specializing in Cloud Computing",
       issuer: "Bangkit Academy",
       year: "2024",
+      url: "https://drive.google.com/file/d/15rL0F5FACBlUEsFWNy-9TmVjod7c_L0b/view?usp=sharing",
     },
     {
       name: "Divide and Conquer, Sorting and Searching, and Randomized Algorithms",
       issuer: "Stanford University via Coursera",
       year: "2024",
+      url: "https://www.coursera.org/account/accomplishments/verify/XWGV9MT9FTG8",
     },
     {
       name: "System Administration and IT Infrastructure Services",
       issuer: "Google via Coursera",
       year: "2024",
+      url: "https://www.coursera.org/account/accomplishments/verify/JH7ARVZMHSBE",
     },
     {
       name: "The Bits and Bytes of Computer Networking",
       issuer: "Google via Coursera",
       year: "2024",
+      url: "https://www.coursera.org/account/accomplishments/verify/VS34BQH6PTCY",
     },
   ],
   projects: [
