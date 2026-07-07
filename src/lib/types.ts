@@ -34,6 +34,7 @@ export interface ResumeData {
     company: string;
     link: string;
     badges: string[];
+    techBadges: string[];
     title: string;
     start: string;
     end: string | null;

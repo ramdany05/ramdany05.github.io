@@ -10,19 +10,20 @@ type WorkBadges = readonly string[];
 interface BadgeListProps {
   className?: string;
   badges: WorkBadges;
+  ariaLabel?: string;
 }
 
 /**
  * Renders a list of badges for work experience
  * Handles both mobile and desktop layouts through className prop
  */
-function BadgeList({ className, badges }: BadgeListProps) {
+function BadgeList({ className, badges, ariaLabel }: BadgeListProps) {
   if (badges.length === 0) return null;
 
   return (
     <ul
       className={cn("inline-flex list-none gap-x-1 p-0", className)}
-      aria-label="Technologies used"
+      aria-label={ariaLabel}
     >
       {badges.map((badge) => (
         <li key={badge}>
@@ -88,8 +89,17 @@ interface WorkExperienceItemProps {
  * Handles responsive layout for badges (mobile/desktop)
  */
 function WorkExperienceItem({ work }: WorkExperienceItemProps) {
-  const { company, link, badges, title, start, end, description, highlights } =
-    work;
+  const {
+    company,
+    link,
+    badges,
+    techBadges,
+    title,
+    start,
+    end,
+    description,
+    highlights,
+  } = work;
 
   return (
     <Card className="border-none py-1 print:py-0">
@@ -98,8 +108,9 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
           <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
             <CompanyLink company={company} link={link} />
             <BadgeList
-              className="hidden gap-x-1 sm:inline-flex"
+              className="gap-x-1"
               badges={badges}
+              ariaLabel="Work type"
             />
           </h3>
           <WorkPeriod start={start} end={end} />
@@ -123,8 +134,9 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
         </div>
         <div className="mt-2">
           <BadgeList
-            className="-mx-2 flex-wrap gap-1 sm:hidden"
-            badges={badges}
+            className="-mx-2 flex-wrap gap-1"
+            badges={techBadges}
+            ariaLabel="Technologies used"
           />
         </div>
       </CardContent>
