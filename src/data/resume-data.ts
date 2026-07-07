@@ -9,7 +9,7 @@ export const RESUME_DATA: ResumeData = {
     "Backend Engineer building enterprise applications, ecommerce platforms, and offline-first systems.",
   summary:
     "Fresh graduate with a Bachelor's degree in Information Systems and hands-on experience developing enterprise applications, ecommerce platforms, and offline-first POS systems. Skilled in backend development using Java, Spring Boot, Laravel, Express.js, PostgreSQL, and MySQL, with a strong foundation in REST API development, database design, authorization systems, and cloud-based solutions.",
-  avatarUrl: "/avatar.jpg",
+  avatarUrl: "https://ramdany05.github.io/avatar.jpg",
   personalWebsiteUrl: "https://github.com/ramdany05",
   contact: {
     email: "suhandiramdany@gmail.com",
