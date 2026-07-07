@@ -138,6 +138,28 @@ export const RESUME_DATA: ResumeData = {
     "OpenAI API",
     "LLM Integration",
   ],
+  certifications: [
+    {
+      name: "Specializing in Cloud Computing",
+      issuer: "Bangkit Academy",
+      year: "2024",
+    },
+    {
+      name: "Divide and Conquer, Sorting and Searching, and Randomized Algorithms",
+      issuer: "Stanford University via Coursera",
+      year: "2024",
+    },
+    {
+      name: "System Administration and IT Infrastructure Services",
+      issuer: "Google via Coursera",
+      year: "2024",
+    },
+    {
+      name: "The Bits and Bytes of Computer Networking",
+      issuer: "Google via Coursera",
+      year: "2024",
+    },
+  ],
   projects: [
     {
       title: "Serverless Computing on GCP",

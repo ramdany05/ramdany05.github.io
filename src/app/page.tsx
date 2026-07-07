@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CommandMenu } from "@/components/command-menu";
 import { RESUME_DATA } from "@/data/resume-data";
 import { generateResumeStructuredData } from "@/lib/structured-data";
+import { Certifications } from "./components/certifications";
 import { Education } from "./components/education";
 import { Header } from "./components/header";
 import { Projects } from "./components/projects";
@@ -100,6 +101,12 @@ export default function ResumePage() {
             <div
               className="animate-fade-in"
               style={{ animationDelay: "375ms" }}
+            >
+              <Certifications certifications={RESUME_DATA.certifications} />
+            </div>
+            <div
+              className="animate-fade-in"
+              style={{ animationDelay: "450ms" }}
             >
               <Projects projects={RESUME_DATA.projects} />
             </div>

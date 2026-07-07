@@ -42,6 +42,11 @@ export interface ResumeData {
     highlights?: readonly string[];
   }>;
   skills: string[];
+  certifications: Array<{
+    name: string;
+    issuer: string;
+    year: string;
+  }>;
   projects: Array<{
     title: string;
     techStack: string[];
