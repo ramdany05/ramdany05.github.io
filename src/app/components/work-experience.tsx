@@ -105,20 +105,20 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
     <Card className="border-none py-1 print:py-0">
       <CardHeader className="print:space-y-1">
         <div className="flex items-center justify-between gap-x-2 text-base">
-          <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
-            {title}
-            <BadgeList
-              className="gap-x-1"
-              badges={badges}
-              ariaLabel="Work type"
-            />
-          </h3>
-          <WorkPeriod start={start} end={end} />
+          <h3 className="font-semibold leading-none print:text-sm">{title}</h3>
+          <BadgeList
+            className="gap-x-1"
+            badges={badges}
+            ariaLabel="Work type"
+          />
         </div>
 
-        <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
-          <CompanyLink company={company} link={link} />
-        </h4>
+        <div className="flex items-center justify-between gap-x-2">
+          <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
+            <CompanyLink company={company} link={link} />
+          </h4>
+          <WorkPeriod start={start} end={end} />
+        </div>
       </CardHeader>
 
       <CardContent>
