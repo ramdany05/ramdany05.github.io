@@ -43,6 +43,20 @@ Fresh graduate with a Bachelor's degree in Information Systems and hands-on expe
 *Participated in algorithm and problem-solving competition* | Jan 2023
 - Achieved 4th place in the final round among 10+ participants in a competitive programming contest organized by Gunadarma I/O using Java programming language.
 
+## Projects
+
+**Sistem Kompensasi** (Academic Project, HRIS Course — Case Study: PT Linkar Aneka Konstruksi Indonesia) | Jul 2025
+Solo-built web app for employee compensation management.
+- Designed and built a multi-module dashboard covering position management, job evaluation, compensation calculation, approval workflows, reporting, and user management, end-to-end on my own.
+- Modeled the system architecture and workflows in Draw.io before implementation, then built the full frontend with React.js and TypeScript.
+- Managed application state with Context API and styled the UI with Tailwind CSS.
+
+**Kulineran Pakansari** (Academic Project, GIS Course) | Jun 2025
+Solo-built web app for restaurant discovery and recommendations around the Pakansari area.
+- Built the full system independently, including category-based search, recommendations, and place-data management, currently running on mock data.
+- Integrated Google Maps Embed for interactive location display and mapping.
+- Implemented with React.js, TypeScript, Tailwind CSS, and Context API for state 
+
 ## Skills
 
 Java, JavaScript, TypeScript, Spring Boot, Express.js, Laravel, REST API, Socket.IO, MySQL, PostgreSQL, MongoDB, Redis, RBAC, System Design, Docker, CI/CD, Git, OpenAPI/Swagger, GCP, React.js, Inertia.js, OpenAI API, LLM Integration

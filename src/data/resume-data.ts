@@ -37,7 +37,7 @@ export const RESUME_DATA: ResumeData = {
   work: [
     {
       company: "PT Agromina Biotech International",
-      link: "",
+      link: "https://www.agrominabiotech.com/",
       badges: ["On Site"],
       techBadges: ["Laravel", "Express.js", "PostgreSQL", "MySQL"],
       title: "Backend Intern",
@@ -52,7 +52,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "PT Integrity Indonesia",
-      link: "",
+      link: "https://www.linkedin.com/company/integrity-indonesia/",
       badges: ["On Site"],
       techBadges: ["Java", "Spring Boot", "React", "TypeScript"],
       title: "Software Engineer Intern",
@@ -67,7 +67,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "Freelance",
-      link: "",
+      link: "https://www.easyinaja.com/",
       badges: ["Remote"],
       techBadges: ["Node.js", "Express.js", "MongoDB", "AI/LLMs"],
       title: "Fullstack Developer",
@@ -82,12 +82,12 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "Computerization Development Center, Gunadarma University",
-      link: "",
+      link: "https://www.linkedin.com/company/lembaga-pengembangan-komputerisasi-universitas-gunadarma/",
       badges: ["On Site"],
       techBadges: ["HTML", "CSS", "JavaScript"],
       title: "Workshop Instructor",
       start: "Jan 2023",
-      end: "2025",
+      end: "Apr 2025",
       description:
         "Assisted students in courses within the scope of web development.",
       highlights: [
@@ -97,7 +97,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "Bangkit Academy",
-      link: "",
+      link: "https://contributors.bangkit.academy/",
       badges: ["Remote"],
       techBadges: ["GCP", "Backend", "REST API"],
       title: "Cloud Computing Cohort",
@@ -165,22 +165,16 @@ export const RESUME_DATA: ResumeData = {
   ],
   projects: [
     {
-      title: "Serverless Computing on GCP",
-      techStack: ["GCP", "Serverless", "Cloud"],
+      title: "Sistem Kompensasi",
+      techStack: ["React.js", "TypeScript", "Tailwind CSS", "Context API"],
       description:
-        "Thesis: Implementation of Serverless Computing on Google Cloud Platform to increase scalability and flexibility",
+        "Solo-built compensation management web app with multi-module dashboard covering position management, job evaluation, compensation calculation, approval workflows, and reporting. Academic HRIS project (case study: PT Linkar Aneka Konstruksi Indonesia).",
     },
     {
-      title: "Bangkit Capstone",
-      techStack: ["Node.js", "REST API", "GCP"],
+      title: "Kulineran Pakansari",
+      techStack: ["React.js", "TypeScript", "Tailwind CSS", "Google Maps"],
       description:
-        "Backend Engineer for a capstone project building REST APIs and managing cloud infrastructure with a cross-functional team",
-    },
-    {
-      title: "Codefest 01",
-      techStack: ["Java", "Algorithms"],
-      description:
-        "Finalist — 4th place among 10+ participants in a competitive programming contest by Gunadarma I/O",
+        "Solo-built restaurant discovery and recommendation web app for the Pakansari area, featuring category-based search, recommendations, and interactive mapping via Google Maps Embed. Academic GIS project.",
     },
   ],
 } as const;

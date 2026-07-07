@@ -67,13 +67,17 @@ interface CompanyLinkProps {
  * Renders company name with optional link
  */
 function CompanyLink({ company, link }: CompanyLinkProps) {
+  if (!link) {
+    return <span>{company}</span>;
+  }
+
   return (
     <a
-      className="hover:underline"
+      className="inline-flex items-center gap-1 underline decoration-foreground/30 underline-offset-2 hover:decoration-foreground"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`${company} company website`}
+      aria-label={`${company} website`}
     >
       {company}
     </a>
