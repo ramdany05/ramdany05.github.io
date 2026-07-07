@@ -85,15 +85,6 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
           />
         </li>
       )}
-      {contact.email && (
-        <li>
-          <SocialButton
-            href={`mailto:${contact.email}`}
-            iconType="mail"
-            label="Email"
-          />
-        </li>
-      )}
       {contact.tel && (
         <li>
           <SocialButton

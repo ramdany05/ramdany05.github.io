@@ -106,7 +106,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
       <CardHeader className="print:space-y-1">
         <div className="flex items-center justify-between gap-x-2 text-base">
           <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
-            <CompanyLink company={company} link={link} />
+            {title}
             <BadgeList
               className="gap-x-1"
               badges={badges}
@@ -117,7 +117,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
         </div>
 
         <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
-          {title}
+          <CompanyLink company={company} link={link} />
         </h4>
       </CardHeader>
 
