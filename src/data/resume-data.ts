@@ -30,8 +30,8 @@ export const RESUME_DATA: ResumeData = {
     {
       school: "Universitas Gunadarma",
       degree: "Bachelor's Degree in Information System (GPA: 3.65 / 4.00)",
-      start: "2021",
-      end: "2025",
+      start: "Sep 2021",
+      end: "Sep 2025",
     },
   ],
   work: [
@@ -56,8 +56,8 @@ export const RESUME_DATA: ResumeData = {
       badges: ["On Site"],
       techBadges: ["Java", "Spring Boot", "React", "TypeScript"],
       title: "Software Engineer Intern",
-      start: "2025",
-      end: "2025",
+      start: "Dec 2025",
+      end: "Jun 2025",
       description:
         "Contributed to an enterprise background screening platform.",
       highlights: [
@@ -71,8 +71,8 @@ export const RESUME_DATA: ResumeData = {
       badges: ["Remote"],
       techBadges: ["Node.js", "Express.js", "MongoDB", "AI/LLMs"],
       title: "Fullstack Developer",
-      start: "2025",
-      end: "2025",
+      start: "Mar 2025",
+      end: "Aug 2025",
       description:
         "Delivered web and AI solutions for businesses and end-users.",
       highlights: [
@@ -86,7 +86,7 @@ export const RESUME_DATA: ResumeData = {
       badges: ["On Site"],
       techBadges: ["HTML", "CSS", "JavaScript"],
       title: "Workshop Instructor",
-      start: "2023",
+      start: "Jan 2023",
       end: "2025",
       description:
         "Assisted students in courses within the scope of web development.",
@@ -101,8 +101,8 @@ export const RESUME_DATA: ResumeData = {
       badges: ["Remote"],
       techBadges: ["GCP", "Backend", "REST API"],
       title: "Cloud Computing Cohort",
-      start: "2024",
-      end: "2024",
+      start: "Feb 2024",
+      end: "Jun 2024",
       description:
         "Industry-led cloud computing training program by Google, GoTo, and Traveloka.",
       highlights: [
