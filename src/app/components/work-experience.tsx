@@ -155,7 +155,10 @@ interface WorkExperienceProps {
 export function WorkExperience({ work }: WorkExperienceProps) {
   return (
     <Section>
-      <h2 className="text-xl font-bold" id="work-experience">
+      <h2
+        className="border-b-2 border-foreground pb-1 text-xl font-bold"
+        id="work-experience"
+      >
         Work Experience
       </h2>
       <div

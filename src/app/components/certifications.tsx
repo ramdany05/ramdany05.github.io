@@ -63,7 +63,10 @@ interface CertificationsListProps {
 export function Certifications({ certifications }: CertificationsListProps) {
   return (
     <Section>
-      <h2 className="text-xl font-bold" id="certifications-section">
+      <h2
+        className="border-b-2 border-foreground pb-1 text-xl font-bold"
+        id="certifications-section"
+      >
         Certifications
       </h2>
       <div

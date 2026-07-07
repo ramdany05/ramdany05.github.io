@@ -5,8 +5,7 @@ export const RESUME_DATA: ResumeData = {
   initials: "RS",
   location: "Indonesia, WIB",
   locationLink: "https://www.google.com/maps/place/Indonesia",
-  about:
-    "Backend Engineer building enterprise applications, ecommerce platforms, and offline-first systems.",
+  about: "Building products that solve real-world problems through software.",
   summary:
     "Fresh graduate with a Bachelor's degree in Information Systems and hands-on experience developing enterprise applications, ecommerce platforms, and offline-first POS systems. Skilled in backend development using Java, Spring Boot, Laravel, Express.js, PostgreSQL, and MySQL, with a strong foundation in REST API development, database design, authorization systems, and cloud-based solutions.",
   avatarUrl: "https://ramdany05.github.io/avatar.jpg",
@@ -42,8 +41,8 @@ export const RESUME_DATA: ResumeData = {
       badges: ["On Site"],
       techBadges: ["Laravel", "Express.js", "PostgreSQL", "MySQL"],
       title: "Backend Intern",
-      start: "2025",
-      end: "2026",
+      start: "Oct 2025",
+      end: "Dec 2026",
       description:
         "Developed and maintained web-based solutions for multiple business clients.",
       highlights: [

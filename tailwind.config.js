@@ -61,6 +61,11 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        brutal: "3px 3px 0 0 hsl(var(--foreground))",
+        "brutal-sm": "2px 2px 0 0 hsl(var(--foreground))",
+        "brutal-lg": "6px 6px 0 0 hsl(var(--foreground))",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

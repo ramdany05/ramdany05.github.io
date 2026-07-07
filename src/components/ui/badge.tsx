@@ -4,17 +4,17 @@ import type * as React from "react";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-semibold font-mono transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap",
+  "inline-flex items-center rounded-sm border-2 border-foreground px-2 py-0.5 text-xs font-semibold font-mono transition-all focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 text-nowrap",
   {
     variants: {
       variant: {
         default:
-          "border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60",
+          "bg-primary text-primary-foreground shadow-brutal-sm hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal print:shadow-none",
         secondary:
-          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60",
+          "bg-secondary text-secondary-foreground shadow-brutal-sm hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal print:shadow-none",
         destructive:
-          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
-        outline: "text-foreground",
+          "bg-destructive text-destructive-foreground shadow-brutal-sm",
+        outline: "bg-background text-foreground",
       },
     },
 

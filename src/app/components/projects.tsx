@@ -91,7 +91,7 @@ interface ProjectCardProps {
  */
 function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
   return (
-    <Card className="flex h-full flex-col overflow-hidden border p-3">
+    <Card className="flex h-full flex-col overflow-hidden border-2 border-foreground p-3 shadow-brutal print:border print:shadow-none">
       <CardHeader>
         <div className="space-y-1">
           <CardTitle className="text-base">
@@ -122,7 +122,10 @@ interface ProjectsProps {
 export function Projects({ projects }: ProjectsProps) {
   return (
     <Section className="scroll-mb-16 print:space-y-4">
-      <h2 className="text-xl font-bold" id="side-projects">
+      <h2
+        className="border-b-2 border-foreground pb-1 text-xl font-bold"
+        id="side-projects"
+      >
         Side projects
       </h2>
       <div
@@ -133,7 +136,7 @@ export function Projects({ projects }: ProjectsProps) {
         {projects.map((project) => (
           <article
             key={project.title}
-            className="h-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm print:hover:translate-y-0 print:hover:shadow-none"
+            className="h-full transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 print:hover:translate-y-0"
           >
             <ProjectCard
               title={project.title}
