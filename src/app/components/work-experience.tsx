@@ -1,3 +1,6 @@
+"use client";
+
+import { useCallback, useRef, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
@@ -89,6 +92,73 @@ interface WorkExperienceItemProps {
 }
 
 /**
+ * Hook to detect when an element enters the viewport
+ * Disconnects after first intersection for performance
+ */
+function useInView(threshold = 0.1) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+
+  const setRef = useCallback(
+    (node: HTMLDivElement | null) => {
+      if (!node) return;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setInView(true);
+            observer.disconnect();
+          }
+        },
+        { threshold, rootMargin: "0px 0px -40px 0px" }
+      );
+      observer.observe(node);
+      (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
+      return () => observer.disconnect();
+    },
+    [threshold]
+  );
+
+  return { ref: setRef, inView };
+}
+
+interface TimelineItemProps {
+  work: WorkExperience;
+  isLast: boolean;
+}
+
+/**
+ * Wraps a work experience item with timeline bullet and vertical connecting line
+ * The line grows dynamically when the item scrolls into view
+ */
+function TimelineItem({ work, isLast }: TimelineItemProps) {
+  const { ref, inView } = useInView(0.1);
+
+  return (
+    <div ref={ref} className="relative pl-10 print:pl-0">
+      {/* Vertical connecting line from bullet downward */}
+      {!isLast && (
+        <div
+          className={cn(
+            "absolute left-[15px] top-0 w-0.5 bg-foreground/20 transition-[height] duration-700 ease-out print:hidden",
+            inView ? "h-full" : "h-0"
+          )}
+        />
+      )}
+      {/* Timeline bullet dot */}
+      <div
+        className={cn(
+          "absolute left-[10px] top-1.5 size-3 rounded-full border-2 border-foreground bg-card transition-all duration-500 print:hidden",
+          inView ? "scale-100 opacity-100" : "scale-0 opacity-0"
+        )}
+        aria-hidden="true"
+      />
+      {/* Content */}
+      <WorkExperienceItem work={work} />
+    </div>
+  );
+}
+
+/**
  * Individual work experience card component
  * Handles responsive layout for badges (mobile/desktop)
  */
@@ -170,10 +240,12 @@ export function WorkExperience({ work }: WorkExperienceProps) {
         role="feed"
         aria-labelledby="work-experience"
       >
-        {work.map((item) => (
-          <article key={`${item.company}-${item.start}`}>
-            <WorkExperienceItem work={item} />
-          </article>
+        {work.map((item, index) => (
+          <TimelineItem
+            key={`${item.company}-${item.start}`}
+            work={item}
+            isLast={index === work.length - 1}
+          />
         ))}
       </div>
     </Section>
