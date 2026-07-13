@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
@@ -123,27 +123,17 @@ function useInView(threshold = 0.1) {
 
 interface TimelineItemProps {
   work: WorkExperience;
-  isLast: boolean;
 }
 
 /**
- * Wraps a work experience item with timeline bullet and vertical connecting line
- * The line grows dynamically when the item scrolls into view
+ * Wraps a work experience item with an animated timeline bullet dot
+ * A single continuous vertical line is rendered on the parent container
  */
-function TimelineItem({ work, isLast }: TimelineItemProps) {
+function TimelineItem({ work }: TimelineItemProps) {
   const { ref, inView } = useInView(0.1);
 
   return (
     <div ref={ref} className="relative pl-10 print:pl-0">
-      {/* Vertical connecting line from bullet downward */}
-      {!isLast && (
-        <div
-          className={cn(
-            "absolute left-[15px] top-0 w-0.5 bg-foreground/20 transition-[height] duration-700 ease-out print:hidden",
-            inView ? "h-full" : "h-0"
-          )}
-        />
-      )}
       {/* Timeline bullet dot */}
       <div
         className={cn(
@@ -152,7 +142,6 @@ function TimelineItem({ work, isLast }: TimelineItemProps) {
         )}
         aria-hidden="true"
       />
-      {/* Content */}
       <WorkExperienceItem work={work} />
     </div>
   );
@@ -227,6 +216,26 @@ interface WorkExperienceProps {
  * Renders a list of work experiences in chronological order
  */
 export function WorkExperience({ work }: WorkExperienceProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [lineVisible, setLineVisible] = useState(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (el) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setLineVisible(true);
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.1 }
+      );
+      observer.observe(el);
+      return () => observer.disconnect();
+    }
+  }, []);
+
   return (
     <Section>
       <h2
@@ -236,16 +245,21 @@ export function WorkExperience({ work }: WorkExperienceProps) {
         Work Experience
       </h2>
       <div
-        className="space-y-4 print:space-y-0"
+        ref={containerRef}
+        className="relative space-y-4 print:space-y-0"
         role="feed"
         aria-labelledby="work-experience"
       >
-        {work.map((item, index) => (
-          <TimelineItem
-            key={`${item.company}-${item.start}`}
-            work={item}
-            isLast={index === work.length - 1}
-          />
+        {/* Single continuous vertical timeline line connecting all bullets */}
+        <div
+          className={cn(
+            "absolute left-[15px] top-3 w-0.5 bg-foreground/20 transition-all duration-700 ease-out print:hidden",
+            lineVisible ? "h-[calc(100%-1.5rem)] opacity-100" : "h-0 opacity-0"
+          )}
+          aria-hidden="true"
+        />
+        {work.map((item) => (
+          <TimelineItem key={`${item.company}-${item.start}`} work={item} />
         ))}
       </div>
     </Section>
