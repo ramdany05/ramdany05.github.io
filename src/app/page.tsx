@@ -5,6 +5,7 @@ import { generateResumeStructuredData } from "@/lib/structured-data";
 import { Certifications } from "./components/certifications";
 import { Education } from "./components/education";
 import { Header } from "./components/header";
+import { Leadership } from "./components/leadership";
 import { Projects } from "./components/projects";
 import { Skills } from "./components/skills";
 import { Summary } from "./components/summary";
@@ -84,31 +85,37 @@ export default function ResumePage() {
               className="animate-fade-in"
               style={{ animationDelay: "150ms" }}
             >
-              <WorkExperience work={RESUME_DATA.work} />
+              <Skills skills={RESUME_DATA.skills} />
             </div>
             <div
               className="animate-fade-in"
               style={{ animationDelay: "225ms" }}
             >
-              <Education education={RESUME_DATA.education} />
+              <WorkExperience work={RESUME_DATA.work} />
             </div>
             <div
               className="animate-fade-in"
               style={{ animationDelay: "300ms" }}
             >
-              <Skills skills={RESUME_DATA.skills} />
+              <Projects projects={RESUME_DATA.projects} />
             </div>
             <div
               className="animate-fade-in"
               style={{ animationDelay: "375ms" }}
             >
-              <Certifications certifications={RESUME_DATA.certifications} />
+              <Education education={RESUME_DATA.education} />
             </div>
             <div
               className="animate-fade-in"
               style={{ animationDelay: "450ms" }}
             >
-              <Projects projects={RESUME_DATA.projects} />
+              <Leadership leadership={RESUME_DATA.leadership} />
+            </div>
+            <div
+              className="animate-fade-in"
+              style={{ animationDelay: "525ms" }}
+            >
+              <Certifications certifications={RESUME_DATA.certifications} />
             </div>
           </div>
         </section>

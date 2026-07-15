@@ -20,7 +20,7 @@ export function generatePersonStructuredData() {
       telephone: RESUME_DATA.contact.tel,
       contactType: "personal",
     },
-    jobTitle: "Full Stack Engineer",
+    jobTitle: "Backend Engineer",
     worksFor:
       RESUME_DATA.work.length > 0
         ? {

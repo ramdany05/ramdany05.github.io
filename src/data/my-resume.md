@@ -1,6 +1,6 @@
 # Ramdany Suhandi
 
-+6281211335765 | suhandiramdany@gmail.com | [linkedin.com/in/suhandiramdany](https://linkedin.com/in/suhandiramdany) | [github.com/ramdany05](https://github.com/ramdany05)
++62xxxxxxxxx | example@gmail.com | [linkedin.com/in/example](https://linkedin.com/in/suhandiramdany) | [github.com/ramdany05](https://github.com/ramdany05)
 
 Fresh graduate with a Bachelor's degree in Information Systems and hands-on experience developing enterprise applications, ecommerce platforms, and offline-first POS systems. Skilled in backend development using Java, Spring Boot, Laravel, Express.js, PostgreSQL, and MySQL, with a strong foundation in REST API development, database design, authorization systems, and cloud-based solutions.
 

@@ -30,6 +30,14 @@ export interface ResumeData {
     start: string;
     end: string;
   }>;
+  leadership: Array<{
+    title: string;
+    organization: string;
+    start: string;
+    end: string;
+    description: string;
+    highlights?: readonly string[];
+  }>;
   work: Array<{
     company: string;
     link: string;
